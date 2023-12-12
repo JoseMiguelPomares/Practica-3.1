@@ -25,14 +25,13 @@ namespace Practica_2._3
             double coste = 0;
 
             textoTelegrama = txtTexto.Text;
-            //COMENTARIO
             if (cbUrgente.Checked)
             {
                 coste = 2.5;
                 if (numPalabras <= 10)
                     coste = 5;
                 else
-                    pacpocoste = 5 * 0.75 * (numPalabras - 10);
+                    coste = 5 * 0.75 * (numPalabras - 10);
             }
             else
             {
@@ -41,7 +40,6 @@ namespace Practica_2._3
                 else
                     coste = 2.5 * 0.75 * (numPalabras - 10);
             }
-            //PACO
             txtCoste.Text = coste.ToString() + " euros";
         }
     }
