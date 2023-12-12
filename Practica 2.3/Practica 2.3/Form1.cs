@@ -34,8 +34,8 @@ namespace Practica_2._3
                 else
                     coste = 5 * 0.75 * (numPalabras - 10);
             }
-            else
-            {
+            else 
+            { //no Urgente!
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
