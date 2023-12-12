@@ -26,7 +26,7 @@ namespace Practica_2._3
 
             textoTelegrama = txtTexto.Text;
             //COMENTARIO
-            if (cbUrgente.Checked)
+            if (rdUrgente.Checked)
             {
                 coste = 2.5;
                 if (numPalabras <= 10)
@@ -34,8 +34,8 @@ namespace Practica_2._3
                 else
                     coste = 5 * 0.75 * (numPalabras - 10);
             }
-            else 
-            { //no Urgente!
+            if (rdOrdinario.Checked) 
+            { //cambiamos el checkbox button por 2 radio button
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
