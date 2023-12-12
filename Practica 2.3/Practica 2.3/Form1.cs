@@ -32,7 +32,7 @@ namespace Practica_2._3
                 if (numPalabras <= 10)
                     coste = 5;
                 else
-                    coste = 5 * 0.75 * (numPalabras - 10);
+                    pacpocoste = 5 * 0.75 * (numPalabras - 10);
             }
             else
             {
