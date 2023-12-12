@@ -25,7 +25,7 @@ namespace Practica_2._3
             double coste = 0;
 
             textoTelegrama = txtTexto.Text;
-            //COMENTARIO
+
             if (rdUrgente.Checked)
             {
                 coste = 2.5;
