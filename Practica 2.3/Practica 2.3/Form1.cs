@@ -16,5 +16,33 @@ namespace Practica_2._3
         {
             InitializeComponent();
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            string textoTelegrama = txtTexto.Text;
+            string[] palabra = textoTelegrama.Split(' ');
+            int numPalabras = textoTelegrama.Split(' ').Length;
+            double coste = 0;
+
+            textoTelegrama = txtTexto.Text;
+            //COMENTARIO
+            if (cbUrgente.Checked)
+            {
+                coste = 2.5;
+                if (numPalabras <= 10)
+                    coste = 5;
+                else
+                    coste = 5 * 0.75 * (numPalabras - 10);
+            }
+            else
+            {
+                if (numPalabras <= 10)
+                    coste = 2.5;
+                else
+                    coste = 2.5 * 0.75 * (numPalabras - 10);
+            }
+            //PACO
+            txtCoste.Text = coste.ToString() + " euros";
+        }
     }
 }
